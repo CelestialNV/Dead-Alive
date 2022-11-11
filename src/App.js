@@ -1,4 +1,4 @@
-import './App.css';
+import './build/stylesheet.css';
 import {useRef} from 'react';
 import { useState } from 'react';
 import Random from './functions/Random';
@@ -8,6 +8,7 @@ import Alive from './functions/Alive';
 import Dead from './functions/Dead';
 import AliveRabbit from './assets/bunny-alive.png';
 import DeadRabbit from './assets/bunny-dead.png';
+import Modal from './Modal/Modal';
 
 //Getting Random 4 digit Number
 let number = Random();
@@ -63,20 +64,26 @@ setRabbitState(state);
 }
 
   return (
-    <div>
-        <div>
+    <div className='Background'>
+      <div className='icons'>
+          <center>
           <img src={rabbitState[0]}  alt=''/>
           <img src={rabbitState[1]}  alt=''/>
           <img src={rabbitState[2]} alt=''/>
           <img src={rabbitState[3]}  alt=''/>
+          </center>
         </div>
-        <div className='body'>
-          <h1>{number.get(0)}{number.get(1)}{number.get(2)}{number.get(3)}</h1>
-          <h3>Message : {message}</h3>
-          <input ref={inputRef} type="text" name='field' id='field' placeholder='Enter your Guess'/>
-          <button name='submit' id='submit'  onClick={event}>Submit</button>
-          </div>
-    </div>
+        <div className='Message'>
+          <h3>{message}</h3>
+        </div>
+        <div className='box'>
+          <input ref={inputRef} maxLength='4' />
+          <button name='submit' id='submit' className="Custom-button"  onClick={event}>Submit</button>
+        </div>
+        <div className='help'>
+          <Modal/>
+        </div>
+      </div>
   );
 }
 
