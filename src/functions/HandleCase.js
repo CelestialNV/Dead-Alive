@@ -1,6 +1,6 @@
 const HandleCase = (answer,dead,alive) =>{
 
-    if(answer > 9999){
+    if(answer.get(0) > 9){
       return 'Number must have exactly 4 digits';
     }
       else if (dead === 4){
