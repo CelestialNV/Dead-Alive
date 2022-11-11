@@ -26,7 +26,7 @@ export default function Modal() {
           <div className="modal-content">
             <center><h2>Welcome to Dead-Alive</h2></center>
             <p>
-              The goal of the game is to guess the random 4 digits number. After you enter your guess, you will be given how many digits are present in the number you but their order is not the same i.e Alive, and how many digits are present and their order is right whithin your guess i.e Dead.
+            The premiss is as follows : You need to guess the random generated number. The application will tell you if your guess has any digits that are present in the number but its position is false i.e Alive, and if you have any digits that are present and their position is correct in the number i.e Dead.
             </p>
             <button className="close-modal" onClick={toggleModal}>
               CLOSE
