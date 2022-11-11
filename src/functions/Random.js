@@ -17,7 +17,6 @@ for(let i=0; i<4;i++){
 
   index = Math.floor(Math.random() * available.length);
   number = available[index];
-  console.log(number);
   map.set(i, number);
   available.splice(index, 1);
 
